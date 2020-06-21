@@ -1,3 +1,98 @@
 .hide {
   display: none;
 }
+* {
+  background: #f0eded;
+  box-sizing: border-box;
+  padding: 0; 
+  margin: 0;
+}
+
+main { 
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  font-family: 'Raleway', sans-serif;
+}
+
+.welcomeScreen {
+  position: relative;
+  top: calc(0.375 * 100vh);
+
+}
+
+.startScreen {
+  margin-top: 80px;
+  text-align: center;
+}
+.startScreen .workoutName {
+  font-size: 100pt;
+}
+
+.startButton {
+    font-size: 20pt;
+    width: 100px;
+    height: 100px;
+    margin-top: 50px;
+}
+button {
+  font-size: 16px;
+  margin-top: -1px;
+  height: 36px;
+  width: 42px;
+  background: white;
+  border: 0px;
+  transition: 0.5s;
+}
+button:hover{
+  background: #0c2733;
+  color: white;
+}
+
+.title {
+  color: #0c2733;
+  text-align: center;
+  font-family: adobe-garamond-pro, serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 50pt;
+  display: block;
+}
+
+#workouts {
+  font-size: 16px;
+  width: 500px;
+  height: 36px;
+  background: white;
+  border: 0px;
+  padding: 5px;
+}
+
+.error {
+  margin-top: 2px;
+  font-size: 12px;
+  color: grey;
+}
+
+.timer {
+  margin-top: 80px;
+  text-align: center;
+}
+.timer .name {
+  font-size: 100pt;
+}
+.time {
+  font-family: 'Major Mono Display', monospace;
+  font-size: 200pt;
+}
+.timer .notes {
+  font-size: 20pt;
+  color:#969696;
+  position: absolute; 
+  top: 600px;
+  left: 33%;
+  width: 600px;
+}

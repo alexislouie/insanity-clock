@@ -5,23 +5,12 @@ export const test = {
             exercises: [
                 {
                     name: 'Jog',
-                    duration: 1.2,
-                    unitTime: 'm',
-                    notes: ''
-                },
-                {
-                    name: 'Jumping Jacks',
                     duration: 1,
                     unitTime: 's',
-                    notes: ''
-                }
-            ]
-        },
-        {
-            repeat: 1,
-            exercises: [
+                    notes: 'Shaun T Demonstrates: 8 Jump Ropes/8 Hop Squats (jump w/ knees to chest)'
+                },
                 {
-                    name: 'Flip',
+                    name: 'Cool Down',
                     duration: 1,
                     unitTime: 's',
                     notes: ''
@@ -36,65 +25,73 @@ export const test = {
                 {
                     name: 'break',
                     duration: 2,
-                    unitTime: 's'
+                    unitTime: 's',
+                    notes: ''
                 },
                 {
                     name: 'stretch',
-                    duration: 1.2,
-                    unitTime: 'm'
+                    duration: 1,
+                    unitTime: 's',
+                    notes: ''
                 },
                 {
                     name: 'break',
                     duration: 2,
-                    unitTime: 's'
+                    unitTime: 's',
+                    notes: ''
                 }
             ]
-        } 
+        }
     ],
-    // workout: [
-    //     {
-    //         repeat: 1,
-    //         exercises: [
-    //             {
-    //                 name: 'Suicide Drills',
-    //                 duration: 2,
-    //                 unitTime: 's',
-    //                 notes: ''
-    //             },
-    //             {
-    //                 name: 'break',
-    //                 duration: 2,
-    //                 unitTime: 's',
-    //                 notes: ''
-    //             }
-    //         ]
-    //     },
-    //     {
-    //         repeat: 1,
-    //         exercises: [
-    //             {
-    //                 name: 'Ski Downs',
-    //                 duration: 2,
-    //                 unitTime: 's',
-    //                 notes: ''
-    //             },
-    //             {
-    //                 name: 'break',
-    //                 duration: 5,
-    //                 unitTime: 's',
-    //                 notes: ''
-    //             }
-    //         ]
-    //     }
-    // ],
-    // cooldown: [
-    //     {
-    //         name: 'Cool Down',
-    //         duration: 3.5,
-    //         unitTime: 'm',
-    //         notes: ''
-    //     }
-    // ]
+    workout: [
+        {
+            repeat: 1,
+            exercises: [
+                {
+                    name: 'Suicide Drills',
+                    duration: 2,
+                    unitTime: 's',
+                    notes: ''
+                },
+                {
+                    name: 'break',
+                    duration: 2,
+                    unitTime: 's',
+                    notes: ''
+                }
+            ]
+        },
+        {
+            repeat: 1,
+            exercises: [
+                {
+                    name: 'Ski Downs',
+                    duration: 2,
+                    unitTime: 's',
+                    notes: ''
+                },
+                {
+                    name: 'break',
+                    duration: 5,
+                    unitTime: 's',
+                    notes: ''
+                }
+            ]
+        }
+    ],
+    cooldown: [
+        {   
+            repeat: 1,
+            exercises: [
+                {
+                    name: 'Cool Down',
+                    duration: 3.5,
+                    unitTime: 'm',
+                    notes: ''
+                }
+            ]
+        }
+    ]
 }
 
 export const plyoCardioCircuit = {
@@ -149,20 +146,28 @@ export const plyoCardioCircuit = {
     ],
     stretch: [
         {
-            name: 'break',
-            duration: 30,
-            unitTime: 's'
-        },
-        {
-            name: 'stretch',
-            duration: 7,
-            unitTime: 'm'
-        },
-        {
-            name: 'break',
-            duration: 30,
-            unitTime: 's'
-        },
+            repeat: 1,
+            exercises: [
+                {
+                    name: 'break',
+                    duration: 30,
+                    unitTime: 's',
+                    notes: ''
+                },
+                {
+                    name: 'stretch',
+                    duration: 7,
+                    unitTime: 'm',
+                    notes: ''
+                },
+                {
+                    name: 'break',
+                    duration: 30,
+                    unitTime: 's',
+                    notes: ''
+                }
+            ]
+        }
     ],
     workout: [
         {
@@ -461,10 +466,15 @@ export const plyoCardioCircuit = {
     ],
     cooldown: [
         {
-            name: 'Cool Down',
-            duration: 3.5,
-            unitTime: 'm',
-            notes: ''
+            repeat: 1,
+            exercises: [
+                {
+                    name: 'Cool Down',
+                    duration: 3.5,
+                    unitTime: 'm',
+                    notes: ''
+                }
+            ]
         }
     ]
 }
@@ -521,19 +531,27 @@ export const pureCardio = {
     ],
     stretch: [
         {
-            name: 'break',
-            duration: 30,
-            unitTime: 's'
-        },
-        {
-            name: 'stretch',
-            duration: 6,
-            unitTime: 'm'
-        },
-        {
-            name: 'break',
-            duration: 30,
-            unitTime: 's'
+            repeat: 1, 
+            exercises: [
+                {
+                    name: 'break',
+                    duration: 30,
+                    unitTime: 's',
+                    notes: ''
+                },
+                {
+                    name: 'stretch',
+                    duration: 6,
+                    unitTime: 'm',
+                    notes: ''
+                },
+                {
+                    name: 'break',
+                    duration: 30,
+                    unitTime: 's',
+                    notes: ''
+                }
+            ]
         },
     ],
     workout: [
@@ -647,10 +665,15 @@ export const pureCardio = {
     ],
     cooldown: [
         {
-            name: 'Cool Down',
-            duration: 3.5,
-            unitTime: 'm',
-            notes: ''
+            repeat: 1,
+            exercises: [
+                {
+                    name: 'Cool Down',
+                    duration: 3.5,
+                    unitTime: 'm',
+                    notes: ''
+                }
+            ]
         }
     ]
 }
@@ -766,20 +789,28 @@ export const maxIntervalCircuit = {
     ],
     stretch: [
         {
-            name: 'break',
-            duration: 30,
-            unitTime: 's'
-        },
-        {
-            name: 'stretch',
-            duration: 4.75,
-            unitTime: 'm'
-        },
-        {
-            name: 'break',
-            duration: 30,
-            unitTime: 's'
-        },
+            repeat: 1,
+            exercises: [
+                {
+                    name: 'break',
+                    duration: 30,
+                    unitTime: 's',
+                    notes: ''
+                },
+                {
+                    name: 'stretch',
+                    duration: 4.75,
+                    unitTime: 'm',
+                    notes: ''
+                },
+                {
+                    name: 'break',
+                    duration: 30,
+                    unitTime: 's',
+                    notes: ''
+                }
+            ]
+        }
     ],
     workout: [
         {
@@ -1130,10 +1161,15 @@ export const maxIntervalCircuit = {
     ],
     cooldown: [
         {
-            name: 'Cool Down',
-            duration: 3,
-            unitTime: 'm',
-            notes: ''
+            repeat: 1,
+            exercises: [
+                {
+                    name: 'Cool Down',
+                    duration: 3,
+                    unitTime: 'm',
+                    notes: ''
+                }
+            ]
         }
     ]
 }
@@ -1247,22 +1283,43 @@ export const maxIntervalPlyo = {
             ]
         }
     ],
+    cooldown: [
+        {
+            repeat: 1,
+            exercises: [
+                {
+                    name: 'Cool Down',
+                    duration: 3.5,
+                    unitTime: 'm',
+                    notes: ''
+                }
+            ]
+        }
+    ],
     stretch: [
         {
-            name: 'break',
-            duration: 30,
-            unitTime: 's'
-        },
-        {
-            name: 'stretch',
-            duration: 4.75,
-            unitTime: 'm'
-        },
-        {
-            name: 'break',
-            duration: 30,
-            unitTime: 's'
-        },
+            repeat: 1,
+            exercises: [
+                {
+                    name: 'break',
+                    duration: 30,
+                    unitTime: 's',
+                    notes: ''
+                },
+                {
+                    name: 'stretch',
+                    duration: 4.75,
+                    unitTime: 'm',
+                    notes: ''
+                },
+                {
+                    name: 'break',
+                    duration: 30,
+                    unitTime: 's',
+                    notes: ''
+                }
+            ]
+        }
     ],
     workout: [
         {
@@ -1573,10 +1630,15 @@ export const maxIntervalPlyo = {
     ],
     cooldown: [
         {
-            name: 'Cool Down',
-            duration: 4,
-            unitTime: 'm',
-            notes: ''
+            repeat: 1,
+            exercises: [
+                {
+                    name: 'Cool Down',
+                    duration: 4,
+                    unitTime: 'm',
+                    notes: ''
+                }
+            ]
         }
     ]
 }
@@ -1668,20 +1730,28 @@ export const maxCardioCondit = {
     ],
     stretch: [
         {
-            name: 'break',
-            duration: 30,
-            unitTime: 's'
-        },
-        {
-            name: 'stretch',
-            duration: 5,
-            unitTime: 'm'
-        },
-        {
-            name: 'break',
-            duration: 30,
-            unitTime: 's'
-        },
+            repeat: 1,
+            exercises: [
+                {
+                    name: 'break',
+                    duration: 30,
+                    unitTime: 's',
+                    notes: ''
+                },
+                {
+                    name: 'stretch',
+                    duration: 5,
+                    unitTime: 'm',
+                    notes: ''
+                },
+                {
+                    name: 'break',
+                    duration: 30,
+                    unitTime: 's',
+                    notes: ''
+                },
+            ]
+        }
     ],
     workout: [
         {
@@ -1890,10 +1960,15 @@ export const maxCardioCondit = {
     ],
     cooldown: [
         {
-            name: 'Cool Down',
-            duration: 4,
-            unitTime: 'm',
-            notes: ''
+            repeat: 1,
+            exercises: [
+                {
+                    name: 'Cool Down',
+                    duration: 4,
+                    unitTime: 'm',
+                    notes: ''
+                }
+            ]
         }
     ]
 }

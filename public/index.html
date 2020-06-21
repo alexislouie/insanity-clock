@@ -5,27 +5,40 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Insanity Clock</title>
+    <link rel="stylesheet" href="https://use.typekit.net/ink4ffc.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Raleway&family=Source+Sans+Pro&display=swap"
+        rel="stylesheet">
     <link href="./stylesheets/style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
     <main>
-        <div class="menu">
-            <label for="workouts">Choose a workout:</label>
-            <select name="workouts" id="workouts">
-                <option value="test" id="test">Test</option>
-                <option value="Plyometric Cardio Circuit" id="plyoCardioCircuit">Plyometric Cardio Circuit</option>
-                <option value="Cardio Power & Resistance" id="cardioPowerResist">Cardio Power & Resistance</option>
-                <option value="Pure Cardio" id="pureCardio">Pure Cardio</option>
-                <option value="Max Interval Circuit" id="maxIntervalCircuit">Max Interval Circuit</option>
-                <option value="Max Interval Plyo" id="maxIntervalPlyo">Max Interval Plyo</option>
-                <option value="Max Cardio Conditioning" id="maxCardioCondit">Max Cardio Conditioning</option>
-            </select>
-            <button class="dropdownButton">go</button>
+        <div class="welcomeScreen">
+            <span class="title">insanity stop clock</span>
+            <div class="menu">
+                <!-- <label for="workouts">Select: </label> -->
+                <select name="workouts" id="workouts">
+                    <option value="" disabled selected hidden>Select a workout</option>
+                    <option value="test" id="test">Test</option>
+                    <option value="Plyometric Cardio Circuit" id="plyoCardioCircuit">Plyometric Cardio Circuit</option>
+                    <option value="Cardio Power & Resistance" id="cardioPowerResist">Cardio Power & Resistance</option>
+                    <option value="Pure Cardio" id="pureCardio">Pure Cardio</option>
+                    <option value="Max Interval Circuit" id="maxIntervalCircuit">Max Interval Circuit</option>
+                    <option value="Max Interval Plyo" id="maxIntervalPlyo">Max Interval Plyo</option>
+                    <option value="Max Cardio Conditioning" id="maxCardioCondit">Max Cardio Conditioning</option>
+                </select>
+                <button class="menuButton">go</button>
+            </div>
+        </div>
+
+        <div class="startScreen hide">
+            <button class="startButton">▶</button>
         </div>
 
         <div class="timer">
         </div>
+
 
     </main>
 
