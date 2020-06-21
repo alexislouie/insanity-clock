@@ -6,19 +6,15 @@ import {
     maxCardioCondit, test
 } from './workouts.js';
 
-
-// let selectedWorkout = 'test';
+const sound = new Audio('../beep.mp3');
 let selectedWorkout;
 let delayTime = 0;
 let prevDelayTime = 0;
+let timerHasStarted = false;
+
 $("#workouts").on('change', function () {
     selectedWorkout = $(this).find('option:selected').attr('id');
 });
-
-// $('.menuButton').on('click', function (e) {
-//     e.preventDefault();
-//     setWorkout(selectedWorkout);
-// })
 
 $('.menuButton').on('click', function(e) {
     e.preventDefault();
@@ -36,11 +32,21 @@ $('.menuButton').on('click', function(e) {
 
 $('.startButton').on('click', function (e) {
     e.preventDefault();
-    console.log('selectedWorkout: ', selectedWorkout)
+    timerHasStarted = true;
     setWorkout(selectedWorkout);
-    // $(this).hide();
     $(this).parent().remove();
 })
+
+$(window).on('click', function(e) {
+    if (timerHasStarted) {
+        togglePause();
+    }
+})
+
+function togglePause() {
+    console.log('app will pause');
+}
+
 function findWorkout(workout) {
     $('.startScreen').toggleClass('hide');
     switch (workout) {
@@ -68,9 +74,7 @@ function findWorkout(workout) {
     }
 }
 
-
-function displayWorkout(workoutName, workout) {
-    console.log(workoutName)
+function displayWorkout(workoutName) {
     $('.startScreen').prepend(`
         <span class="workoutName">${workoutName}</span><br />
         <span class="time">00:00</span><br />
@@ -116,7 +120,6 @@ function loopThroughPhase(phase) {
         while (circuitCount < circuit.repeat) {
             exercises.forEach(exercise => {
                 const { name, duration, unitTime, notes } = exercise;
-                console.log('name & circuitCount: ', name, ' ', circuitCount, circuit.repeat)
                 const durationInSeconds = calcDurationInSeconds(duration, unitTime);
                 setCountDown(durationInSeconds, name, notes);
             })
@@ -126,18 +129,41 @@ function loopThroughPhase(phase) {
     })
 }
 
+function calcDurationInSeconds(duration, units) {
+    let durationInSeconds;
+    if (units === 's') {
+        durationInSeconds = duration;
+    } else if (units === 'm') {
+        let minInSeconds = Math.floor(duration) * 60;
+        let seconds = (duration - Math.floor(duration)) * 60;
+        durationInSeconds = minInSeconds + seconds;
+    }
+    return durationInSeconds;
+}
+
 function setCountDown(durationInSeconds, name, notes) {
     delayTime = (durationInSeconds + 1) * 1000;
 
     setTimeout(function () {
         let timer = durationInSeconds;
         let secondCount = 0;
+
+        let bgColor, textColor;
+        if (name === 'break' || name === 'stretch') {
+            bgColor = '#53b882';
+            textColor = 'white';
+
+        } else if (name === 'Cool Down') {
+            bgColor = '#5dcfcf';
+            textColor = 'white';
+        } else {
+            bgColor = '#f0eded';
+        }
+
         while (timer >= 0) {
             const time = deriveMinAndSec(timer);
-            console.log(name, ': ', time);
-
             setTimeout(function () {
-                displayCountDown(time, name, notes);
+                displayCountDown(time, name, notes, bgColor, textColor);
             }, 1000 * secondCount);
 
             timer--;
@@ -146,20 +172,6 @@ function setCountDown(durationInSeconds, name, notes) {
 
     }, prevDelayTime);
     prevDelayTime += delayTime;
-}
-
-function displayCountDown(time, name, notes) {
-    let color; 
-    if (name === 'break' || name === 'stretch') {
-        color = '#53b882';
-    } else if (name === 'Cool Down') {
-        color = '#5dcfcf';
-    }
-    $('.timer').html(`
-        <span class="name" style="color:${color}">${name}</span><br />
-        <span class="time">${time.min}:${time.sec}</span><br />
-        <div class="notes">${notes}</span>
-    `);
 }
 
 function deriveMinAndSec(durationInSeconds) {
@@ -179,20 +191,43 @@ function deriveMinAndSec(durationInSeconds) {
         displaySec = seconds < 10 ? `0${seconds}` : seconds;
     }
     return { min: displayMin, sec: displaySec };
-
 }
 
-function calcDurationInSeconds(duration, units) {
-    let durationInSeconds;
-    if (units === 's') {
-        durationInSeconds = duration;
-    } else if (units === 'm') {
-        let minInSeconds = Math.floor(duration) * 60;
-        let seconds = (duration - Math.floor(duration)) * 60;
-        durationInSeconds = minInSeconds + seconds;
-    }
-    return durationInSeconds;
+function displayCountDown(time, name, notes, bgColor, textColor) {
+    $('main').css('background', bgColor);
+    $('.timer').css('background-color', bgColor);
+    $('.bgColor').css('background-color', bgColor);
+    $('.timer').html(`
+        <span class="name" style="background: ${bgColor};color: ${textColor}">${name}</span><br />
+        <span class="time" style="background: ${bgColor};color: ${textColor}">${time.min}:${time.sec}</span><br />
+        <div class="notes" style="background: ${bgColor};color: ${textColor}">${notes}</span>
+    `);
 }
+
+// var Timer = function (callback, delay) {
+//     var timerId, start, remaining = delay;
+
+//     this.pause = function () {
+//         window.clearTimeout(timerId);
+//         remaining -= Date.now() - start;
+//     };
+
+//     this.resume = function () {
+//         start = Date.now();
+//         window.clearTimeout(timerId);
+//         timerId = window.setTimeout(callback, remaining);
+//     };
+
+//     this.resume();
+// };
+
+// var timer = new Timer(function () {
+//     alert("Done!");
+// }, 1000);
+
+// timer.pause();
+// // Do some stuff...
+// timer.resume();
 
 // Must be able to pause 
 // set Timeout to a variable 
@@ -200,3 +235,5 @@ function calcDurationInSeconds(duration, units) {
 // when unpause, restart the time using the variables 
 // will also need to know where in the loop of sets and exercises we are to restart the loop from there as well 
 // https://stackoverflow.com/questions/3969475/javascript-pause-settimeout
+
+// mute button

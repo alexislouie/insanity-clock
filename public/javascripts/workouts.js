@@ -5,15 +5,15 @@ export const test = {
             exercises: [
                 {
                     name: 'Jog',
-                    duration: 1,
+                    duration: 2,
                     unitTime: 's',
                     notes: 'Shaun T Demonstrates: 8 Jump Ropes/8 Hop Squats (jump w/ knees to chest)'
                 },
                 {
                     name: 'Cool Down',
-                    duration: 1,
+                    duration: 2,
                     unitTime: 's',
-                    notes: ''
+                    notes: 'Shaun T Demonstrates: 8 Jump Ropes/8 Hop Squats (jump w/ knees to chest)'
                 }
             ]
         }
@@ -598,7 +598,7 @@ export const pureCardio = {
                     name: 'Power Jacks',
                     duration: 1,
                     unitTime: 'm',
-                    notes: 'two lunges, followed by 2s sprints'
+                    notes: ''
                 },
                 {
                     name: 'Level 2 Drills',
@@ -914,7 +914,7 @@ export const maxIntervalCircuit = {
                     name: 'break',
                     duration: 10,
                     unitTime: 's',
-                    notes: 'Shaun T Demonstrates: Football Run/Cross Jacks (count down for 4 seconds, 4 Cross Jacks)'
+                    notes: 'Shaun T Demonstrates: Football Run/Cross Jacks (count down 4 seconds, 4 Cross Jacks)'
                 },
                 {
                     name: 'Football Runs/Cross Jack',
@@ -1329,10 +1329,10 @@ export const maxIntervalPlyo = {
                     name: 'break',
                     duration: 15,
                     unitTime: 's',
-                    notes: 'Shaun T Demonstrates: Squat Switch Jumps (squat, jump up and do 180, land into a squat)'
+                    notes: 'Shaun T Demonstrates: Switch Jumps (squat, jump up and do 180, land into a squat)'
                 },
                 {
-                    name: 'Squat Switch Jumps',
+                    name: 'Switch Jumps',
                     duration: 50,
                     unitTime: 's',
                     notes: ''
@@ -1373,7 +1373,7 @@ export const maxIntervalPlyo = {
             repeat: 1,
             exercises: [
                 {
-                    name: 'Squat Switch Jumps',
+                    name: 'Switch Jumps',
                     duration: 40,
                     unitTime: 's',
                     notes: ''
@@ -1408,7 +1408,7 @@ export const maxIntervalPlyo = {
             repeat: 1,
             exercises: [
                 {
-                    name: 'Squat Switch Jumps',
+                    name: 'Switch Jumps',
                     duration: 45,
                     unitTime: 's',
                     notes: ''
@@ -1432,8 +1432,14 @@ export const maxIntervalPlyo = {
                     notes: ''
                 },
                 {
-                    name: 'One-Legged V Push-ups',
-                    duration: 1.25,
+                    name: 'One-Legged V Push-ups: Right Side',
+                    duration: 35,
+                    unitTime: 's',
+                    notes: ''
+                },
+                {
+                    name: 'One-Legged V Push-ups: Left Side',
+                    duration: 35,
                     unitTime: 's',
                     notes: ''
                 },
@@ -1476,7 +1482,7 @@ export const maxIntervalPlyo = {
                     name: 'Globe Twists',
                     duration: 45,
                     unitTime: 's',
-                    notes: 'don\'\t skip, keep legs same distance apart when jumping'
+                    notes: 'don\'t side skip, keep legs same distance apart when jumping'
                 },
                 {
                     name: 'Level 3 Drills',
@@ -1511,7 +1517,7 @@ export const maxIntervalPlyo = {
                     name: 'Globe Twists',
                     duration: 50,
                     unitTime: 's',
-                    notes: 'don\'\t skip, keep legs same distance apart when jumping'
+                    notes: 'don\'t skip, keep legs same distance apart when jumping'
                 },
                 {
                     name: 'Level 3 Drills',
@@ -1552,7 +1558,7 @@ export const maxIntervalPlyo = {
                     name: 'Globe Twists',
                     duration: 50,
                     unitTime: 's',
-                    notes: 'don\'\t skip, keep legs same distance apart when jumping'
+                    notes: 'don\'t skip, keep legs same distance apart when jumping'
                 },
                 {
                     name: 'Level 3 Drills',
@@ -1789,8 +1795,8 @@ export const maxCardioCondit = {
                 },
                 {
                     name: 'Right Kicks',
-                    duration: 1,
-                    unitTime: 'm',
+                    duration: 45,
+                    unitTime: 's',
                     notes: ''
                 },
                 {
@@ -1820,7 +1826,7 @@ export const maxCardioCondit = {
                 {
                     name: 'In-Out Push-up Jacks',
                     duration: 1.08, //1m 5s
-                    unitTime: 's',
+                    unitTime: 'm',
                     notes: '4 in & outs, 4 push-up jacks'
                 },
                 {
