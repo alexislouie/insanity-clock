@@ -1,6 +1,7 @@
 .hide {
   display: none;
 }
+
 * {
   background: #f0eded;
   box-sizing: border-box;
@@ -19,9 +20,12 @@ main {
 }
 
 .welcomeScreen {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
   position: relative;
-  top: calc(0.375 * 100vh);
-
+  top: calc(0.35 * 100vh);
 }
 
 .startScreen {
@@ -58,30 +62,43 @@ button:hover{
   font-family: adobe-garamond-pro, serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 50pt;
+  font-size: 70pt;
   display: block;
 }
 
+.menu {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+}
+
 #workouts {
+  width: 100%;
   font-size: 16px;
-  width: 500px;
   height: 36px;
   background: white;
   border: 0px;
   padding: 5px;
 }
 .menuButton {
+  margin-top: 0.5px;
   margin-left: 4px;
 }
 
 .error {
-  margin-top: 2px;
-  font-size: 12px;
+  margin-top: 10px;
+  font-size: 12pt;
   color: grey;
+  animation: fadeIn 0.5s;
 }
 
+@keyframes fadeIn {
+  0% {opacity: 0};
+  100% {opacity: 1};
+}
 .timer {
   margin-top: 80px;
+  width: 100%;
   text-align: center;
 }
 .timer .name {
@@ -92,12 +109,12 @@ button:hover{
   font-size: 200pt;
 }
 .timer .notes {
-  font-size: 20pt;
-  color:#969696;
+  font-size: 30pt;
   position: absolute; 
   top: 600px;
-  left: 33%;
-  width: 600px;
+  padding-left: 250px;
+  padding-right: 250px;
+  width: 100%;
 }
 
 .bgColor {
