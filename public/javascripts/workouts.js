@@ -1,11 +1,11 @@
 export const test = {
     warmUp: [
         {
-            repeat: 2,
+            repeat: 1,
             exercises: [
                 {
                     name: 'Jog',
-                    duration: 2,
+                    duration: 30,
                     unitTime: 's',
                     notes: 'Shaun T Demonstrates: 8 Jump Ropes/8 Hop Squats (jump w/ knees to chest)'
                 },
@@ -80,7 +80,7 @@ export const test = {
         }
     ],
     cooldown: [
-        {   
+        {
             repeat: 1,
             exercises: [
                 {
@@ -479,50 +479,50 @@ export const plyoCardioCircuit = {
     ]
 }
 
-export const pureCardio = {
+export const cardioPowerResist = {
     warmUp: [
         {
             repeat: 3,
             exercises: [
                 {
                     name: 'Jog',
-                    duration: '30',
+                    duration: 30,
                     unitTime: 's',
                     notes: ''
                 },
                 {
-                    name: 'Jumping Jacks',
-                    duration: '30',
+                    name: 'Power Jacks',
+                    duration: 30,
                     unitTime: 's',
                     notes: ''
                 },
                 {
-                    name: 'Heismans',
-                    duration: '30',
+                    name: 'Log Jumps',
+                    duration: 30,
                     unitTime: 's',
                     notes: ''
                 },
                 {
                     name: '1-2-3',
-                    duration: '30',
+                    duration: 30,
                     unitTime: 's',
                     notes: ''
                 },
                 {
                     name: 'Butt Kicks',
-                    duration: '30',
+                    duration: 30,
                     unitTime: 's',
                     notes: ''
                 },
                 {
                     name: 'High Knees',
-                    duration: '30',
+                    duration: 30,
                     unitTime: 's',
                     notes: ''
                 },
                 {
-                    name: 'Mummy Kicks',
-                    duration: '30',
+                    name: 'Vertical Jumps',
+                    duration: 30,
                     unitTime: 's',
                     notes: ''
                 }
@@ -531,7 +531,303 @@ export const pureCardio = {
     ],
     stretch: [
         {
-            repeat: 1, 
+            repeat: 1,
+            exercises: [
+                {
+                    name: 'break',
+                    duration: 30,
+                    unitTime: 's',
+                    notes: ''
+                },
+                {
+                    name: 'stretch',
+                    duration: 7,
+                    unitTime: 'm',
+                    notes: ''
+                },
+                {
+                    name: 'break',
+                    duration: 30,
+                    unitTime: 's',
+                    notes: ''
+                }
+            ]
+        }
+    ],
+    workout: [
+        {
+            repeat: 1,
+            exercises: [
+                {
+                    name: 'Power Jumps',
+                    duration: 30,
+                    unitTime: 's',
+                    notes: 'hold squat position for 1s'
+                },
+                {
+                    name: 'Belt Kicks',
+                    duration: 30,
+                    unitTime: 's',
+                    notes: ''
+                },
+                {
+                    name: 'Belt Kicks',
+                    duration: 30,
+                    unitTime: 's',
+                    notes: ''
+                },
+                {
+                    name: 'Hit the Floor',
+                    duration: 30,
+                    unitTime: 's',
+                    notes: ''
+                },
+                {
+                    name: 'V Push-up',
+                    duration: 30,
+                    unitTime: 's',
+                    notes: ''
+                },
+                {
+                    name: 'break',
+                    duration: 30,
+                    unitTime: 's',
+                    notes: ''
+                }
+            ]
+        },
+        {
+            repeat: 1,
+            exercises: [
+                {
+                    name: 'Power Jumps',
+                    duration: 30,
+                    unitTime: 's',
+                    notes: ''
+                },
+                {
+                    name: 'Belt Kicks',
+                    duration: 30,
+                    unitTime: 's',
+                    notes: ''
+                },
+                {
+                    name: 'Belt Kicks',
+                    duration: 30,
+                    unitTime: 's',
+                    notes: ''
+                },
+                {
+                    name: 'Hit the Floor',
+                    duration: 30,
+                    unitTime: 's',
+                    notes: ''
+                },
+                {
+                    name: 'V Push-up',
+                    duration: 30,
+                    unitTime: 's',
+                    notes: ''
+                },
+                {
+                    name: 'break',
+                    duration: 30,
+                    unitTime: 's',
+                    notes: ''
+                }
+            ]
+        }, {
+            repeat: 1,
+            exercises: [
+                {
+                    name: 'Power Jumps',
+                    duration: 30,
+                    unitTime: 's',
+                    notes: 'hold squat position for 1s'
+                },
+                {
+                    name: 'Belt Kicks',
+                    duration: 30,
+                    unitTime: 's',
+                    notes: ''
+                },
+                {
+                    name: 'Belt Kicks',
+                    duration: 30,
+                    unitTime: 's',
+                    notes: ''
+                },
+                {
+                    name: 'Hit the Floor',
+                    duration: 30,
+                    unitTime: 's',
+                    notes: ''
+                },
+                {
+                    name: 'V Push-up',
+                    duration: 30,
+                    unitTime: 's',
+                    notes: ''
+                },
+                {
+                    name: 'Tricep Dips',
+                    duration: 30,
+                    unitTime: 's',
+                    notes: ''
+                },
+                {
+                    name: 'Tricep Dips: Right Leg Up',
+                    duration: 15,
+                    unitTime: 's',
+                    notes: ''
+                },
+                {
+                    name: 'Tricep Dips: Left Leg Up',
+                    duration: 15,
+                    unitTime: 's',
+                    notes: ''
+                },
+                {
+                    name: 'break',
+                    duration: 30,
+                    unitTime: 's',
+                    notes: 'Shaun T Demonstrates: Tricep Ball Push-ups'
+                },
+                {
+                    name: 'Tricep Ball Push-ups',
+                    duration: 30,
+                    unitTime: 's',
+                    notes: ''
+                },
+                {
+                    name: 'break',
+                    duration: 30,
+                    unitTime: 's',
+                    notes: ''
+                }
+            ]
+        },
+        {
+            repeat: 3,
+            exercises: [
+                {
+                    name: 'Hurdle Jumps',
+                    duration: 30,
+                    unitTime: 's',
+                    notes: 'Run in place 1s, hop into air (one leg after the other)'
+                },
+                {
+                    name: 'Globe Jumps',
+                    duration: 30,
+                    unitTime: 's',
+                    notes: ''
+                },
+                {
+                    name: 'Moving Push-ups',
+                    duration: 30,
+                    unitTime: 's',
+                    notes: ''
+                },
+                {
+                    name: 'Floor sprints (mountain climbers)',
+                    duration: 30,
+                    unitTime: 's',
+                    notes: ''
+                },
+                {
+                    name: 'break',
+                    duration: 30,
+                    unitTime: 's',
+                    notes: ''
+                }
+            ]
+        },
+        {
+            repeat: 1,
+            exercises: [
+                {
+                    name: '8 Hop Squats/8 Push-ups',
+                    duration: 1,
+                    unitTime: 'm',
+                    notes: 'Run in place 1s, hop into air (one leg after the other)'
+                },
+                {
+                    name: 'break',
+                    duration: 30,
+                    unitTime: 's',
+                    notes: ''
+                }
+            ]
+        }
+    ],
+    cooldown: [
+        {
+            repeat: 1,
+            exercises: [
+                {
+                    name: 'Cool Down',
+                    duration: 3.5,
+                    unitTime: 'm',
+                    notes: ''
+                }
+            ]
+        }
+    ]
+}
+
+export const pureCardio = {
+    warmUp: [
+        {
+            repeat: 3,
+            exercises: [
+                {
+                    name: 'Jog',
+                    duration: 30,
+                    unitTime: 's',
+                    notes: ''
+                },
+                {
+                    name: 'Jumping Jacks',
+                    duration: 30,
+                    unitTime: 's',
+                    notes: ''
+                },
+                {
+                    name: 'Heismans',
+                    duration: 30,
+                    unitTime: 's',
+                    notes: ''
+                },
+                {
+                    name: '1-2-3',
+                    duration: 30,
+                    unitTime: 's',
+                    notes: ''
+                },
+                {
+                    name: 'Butt Kicks',
+                    duration: 30,
+                    unitTime: 's',
+                    notes: ''
+                },
+                {
+                    name: 'High Knees',
+                    duration: 30,
+                    unitTime: 's',
+                    notes: ''
+                },
+                {
+                    name: 'Mummy Kicks',
+                    duration: 30,
+                    unitTime: 's',
+                    notes: ''
+                }
+            ]
+        }
+    ],
+    stretch: [
+        {
+            repeat: 1,
             exercises: [
                 {
                     name: 'break',
@@ -571,16 +867,130 @@ export const pureCardio = {
                     notes: ''
                 },
                 {
-                    name: 'Wide Football Sprints',
+                    name: 'Football Wide',
+                    duration: 10,
+                    unitTime: 's',
+                    notes: ''
+                },
+                {
+                    name: 'Turn Right!',
+                    duration: 2,
+                    unitTime: 's',
+                    notes: ''
+                },
+                {
+                    name: 'Turn Front!',
+                    duration: 2,
+                    unitTime: 's',
+                    notes: ''
+                },
+                {
+                    name: 'Turn Left!',
+                    duration: 2,
+                    unitTime: 's',
+                    notes: ''
+                },
+                {
+                    name: 'Turn Front!',
+                    duration: 2,
+                    unitTime: 's',
+                    notes: ''
+                },
+                {
+                    name: 'Move to the Right',
+                    duration: 2,
+                    unitTime: 's',
+                    notes: ''
+                },
+                {
+                    name: 'Move to the Left',
+                    duration: 2,
+                    unitTime: 's',
+                    notes: ''
+                },
+                {
+                    name: 'Move Back',
+                    duration: 2,
+                    unitTime: 's',
+                    notes: ''
+                },
+                {
+                    name: 'SET',
                     duration: 1,
-                    unitTime: 'm',
+                    unitTime: 's',
+                    notes: ''
+                },
+                {
+                    name: 'Sprint!',
+                    duration: 10,
+                    unitTime: 's',
+                    notes: ''
+                },
+                {
+                    name: 'Football Wide',
+                    duration: 10,
+                    unitTime: 's',
+                    notes: ''
+                },
+                {
+                    name: 'Turn Right!',
+                    duration: 2,
+                    unitTime: 's',
+                    notes: ''
+                },
+                {
+                    name: 'Turn Front!',
+                    duration: 2,
+                    unitTime: 's',
+                    notes: ''
+                },
+                {
+                    name: 'Turn Left!',
+                    duration: 2,
+                    unitTime: 's',
+                    notes: ''
+                },
+                {
+                    name: 'Turn Front!',
+                    duration: 2,
+                    unitTime: 's',
+                    notes: ''
+                },
+                {
+                    name: 'Move to the Right',
+                    duration: 2,
+                    unitTime: 's',
+                    notes: ''
+                },
+                {
+                    name: 'Move to the Left',
+                    duration: 2,
+                    unitTime: 's',
+                    notes: ''
+                },
+                {
+                    name: 'Move Back',
+                    duration: 2,
+                    unitTime: 's',
+                    notes: ''
+                },
+                {
+                    name: 'SET',
+                    duration: 1,
+                    unitTime: 's',
+                    notes: ''
+                },
+                {
+                    name: 'Sprint!',
+                    duration: 10,
+                    unitTime: 's',
                     notes: ''
                 },
                 {
                     name: 'Stance Jacks',
                     duration: 1,
                     unitTime: 'm',
-                    notes: ''
+                    notes: 'Jumping jacks, squat when bringing arms down'
                 },
                 {
                     name: 'Pedal',
