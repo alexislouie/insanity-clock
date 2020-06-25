@@ -1,5 +1,6 @@
 import {
     plyoCardioCircuit,
+    cardioPowerResist,
     pureCardio,
     maxIntervalPlyo,
     maxIntervalCircuit,
@@ -20,12 +21,13 @@ $('.menuButton').on('click', function(e) {
     e.preventDefault();
     if (!selectedWorkout) {
         $('.error').remove();
-        $('.menu').append(`
+        $('.welcomeScreen').append(`
             <div class="error">Please select a workout</div>
         `)
     } else {
         $('.error').remove();
-        $(this).parent().parent().toggleClass('hide');
+        // $(this).parent().parent().toggleClass('hide');
+        $(this).parent().parent().css('display', 'none');
         findWorkout(selectedWorkout);
     }
 })
@@ -117,6 +119,7 @@ function loopThroughPhase(phase) {
     let circuitCount = 0;
     phase.forEach(circuit => {
         const exercises = circuit.exercises;
+
         while (circuitCount < circuit.repeat) {
             exercises.forEach(exercise => {
                 const { name, duration, unitTime, notes } = exercise;
@@ -142,8 +145,10 @@ function calcDurationInSeconds(duration, units) {
 }
 
 function setCountDown(durationInSeconds, name, notes) {
+    console.log(name, ' duration in seconds: ', durationInSeconds)
     delayTime = (durationInSeconds + 1) * 1000;
 
+    console.log(name, ': ', prevDelayTime)
     setTimeout(function () {
         let timer = durationInSeconds;
         let secondCount = 0;
@@ -194,6 +199,10 @@ function deriveMinAndSec(durationInSeconds) {
 }
 
 function displayCountDown(time, name, notes, bgColor, textColor) {
+    if (time.min === '00' && time.sec === '00') {
+        sound.play();
+    }
+
     $('main').css('background', bgColor);
     $('.timer').css('background-color', bgColor);
     $('.bgColor').css('background-color', bgColor);
@@ -204,8 +213,12 @@ function displayCountDown(time, name, notes, bgColor, textColor) {
     `);
 }
 
-// var Timer = function (callback, delay) {
-//     var timerId, start, remaining = delay;
+$('.muteButton').on('click', function(e) {
+    
+})
+
+// const Timer = function (callback, delayTime, name, notes) {
+//     let timerId, start, remaining = delayTime;
 
 //     this.pause = function () {
 //         window.clearTimeout(timerId);
