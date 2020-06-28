@@ -1245,7 +1245,7 @@ export const maxIntervalCircuit = {
                     notes: 'two punches downward, then face the other way and switch arms'
                 },
                 {
-                    name: 'Frog jumps',
+                    name: 'Frog Jumps',
                     duration: 1,
                     unitTime: 'm',
                     notes: ''
@@ -1280,7 +1280,7 @@ export const maxIntervalCircuit = {
                     notes: 'two punches downward, then face the other way and switch arms'
                 },
                 {
-                    name: 'Frog jumps',
+                    name: 'Frog Jumps',
                     duration: 45,
                     unitTime: 's',
                     notes: ''
@@ -1315,7 +1315,7 @@ export const maxIntervalCircuit = {
                     notes: 'two punches downward, then face the other way and switch arms'
                 },
                 {
-                    name: 'Frog jumps',
+                    name: 'Frog Jumps',
                     duration: 40,
                     unitTime: 's',
                     notes: ''
@@ -1328,9 +1328,9 @@ export const maxIntervalCircuit = {
                 },
                 {
                     name: 'Football Runs/Cross Jack',
-                    duration: 10,
-                    unitTime: 's',
-                    notes: ''
+                    duration: 1,
+                    unitTime: 'm',
+                    notes: 'Count down 4 seconds, 4 Cross Jacks'
                 },
                 {
                     name: 'break',
@@ -1353,7 +1353,7 @@ export const maxIntervalCircuit = {
                     name: 'Hook Jumps',
                     duration: 50,
                     unitTime: 's',
-                    notes: ''
+                    notes: '4 hooks high, 4 hooks low, 4 jump ropes (knee to chest)'
                 },
                 {
                     name: 'High Knees w/ Twist',
@@ -1388,7 +1388,7 @@ export const maxIntervalCircuit = {
                     name: 'Hook Jumps',
                     duration: 50,
                     unitTime: 's',
-                    notes: ''
+                    notes: '4 hooks high, 4 hooks low, 4 jump ropes (knee to chest)'
                 },
                 {
                     name: 'High Knees w/ Twist',
@@ -1423,7 +1423,7 @@ export const maxIntervalCircuit = {
                     name: 'Hook Jumps',
                     duration: 45,
                     unitTime: 's',
-                    notes: ''
+                    notes: '4 hooks high, 4 hooks low, 4 jump ropes (knee to chest)'
                 },
                 {
                     name: 'High Knees w/ Twist',
