@@ -571,12 +571,6 @@ export const cardioPowerResist = {
                     notes: ''
                 },
                 {
-                    name: 'Belt Kicks',
-                    duration: 30,
-                    unitTime: 's',
-                    notes: ''
-                },
-                {
                     name: 'Hit the Floor',
                     duration: 30,
                     unitTime: 's',
@@ -612,12 +606,6 @@ export const cardioPowerResist = {
                     notes: ''
                 },
                 {
-                    name: 'Belt Kicks',
-                    duration: 30,
-                    unitTime: 's',
-                    notes: ''
-                },
-                {
                     name: 'Hit the Floor',
                     duration: 30,
                     unitTime: 's',
@@ -641,12 +629,6 @@ export const cardioPowerResist = {
             exercises: [
                 {
                     name: 'Power Jumps',
-                    duration: 30,
-                    unitTime: 's',
-                    notes: 'hold squat position for 1s'
-                },
-                {
-                    name: 'Belt Kicks',
                     duration: 30,
                     unitTime: 's',
                     notes: ''
@@ -749,7 +731,7 @@ export const cardioPowerResist = {
                     name: '8 Hop Squats/8 Push-ups',
                     duration: 1,
                     unitTime: 'm',
-                    notes: 'Run in place 1s, hop into air (one leg after the other)'
+                    notes: ''
                 },
                 {
                     name: 'break',
